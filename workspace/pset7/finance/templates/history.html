@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+
+    table, th, td {
+        border: 1px solid green;
+        border-collapse: collapse;
+    }
+    th, td {
+        padding: 15px;
+    }
+    </style>
+    </head>
+    <body>
+
+    <table align="center">
+        <tr>
+            <th>Symbol</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Date</th>
+        </tr>
+
+        {% for symbol in history %}
+            <tr>
+                <td>{{ symbol["Symbol"] }}</td>
+                <td>{{ symbol["Shares"] }}</td>
+                <td>{{ symbol["Price"] }}</td>
+                <td>{{ symbol["Transacted"] }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
+
+{% endblock %}

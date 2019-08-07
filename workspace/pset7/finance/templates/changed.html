@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Changed
+{% endblock %}
+
+{% block main %}
+    {% if passChanged %}
+        <p>
+            Your password has been changed.
+        </p>
+    {% else %}
+        <p>
+            Your password was not changed.
+        </p>
+    {% endif %}
+{% endblock %}

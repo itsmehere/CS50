@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    QuotePrint
+{% endblock %}
+
+{% block main %}
+    <p>
+        A share of {{ name }} ({{ symbl }}) costs {{ "${:,.2f}".format(price) }}
+    </p>
+{% endblock %}
